@@ -33,6 +33,7 @@ function checkTextField(txtName, length){   /* Validation function to common tex
         /* Can not be empty or too long characters error msg */
     }else{
         setErrStyle(txtName);
+        /* txtName.setCustomValidity("Nameee"); */
         /* setErrorLog */
     }
 }
@@ -50,3 +51,11 @@ function setErrStyle(inputName){
 
 /* outline-color: #EF233C;
     background-color: #FFADAD; */
+
+
+/* if(!name.match(/^[a-zZ])){
+    error MSG
+    return false
+    }
+    return true
+} */

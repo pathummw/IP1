@@ -4,18 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
     <script src="validation.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>  <!-- Send email -->
+    <script src="email.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
 </head>
 <body onload="startTime()">
+    <?php include 'mail.php';?>
+
     <header>
         <nav>
             <ul>
-                <li><a href="">Hem</a></li>
-                <li><a href="">Behandlingar</a></li>
-                <li><a href="">Boka tid</a></li>
-                <li><a href="">Hitta hit</a></li>
+                <li><a  href="">Hem</a></li>
+                <li><a  href="">Behandlingar</a></li>
+                <li><a  href="">Boka tid</a></li>
+                <li><a  href="">Hitta hit</a></li>
             </ul>
         </nav>
     </header>
@@ -42,9 +47,9 @@
     </section>
     
     <section class="flexPrisList">
-        <h1>This is our behandlings</h1>
-        <h2>Pris lista</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium autem odio optio 
+        <h1 data-aos="fade-up" >This is our behandlings</h1>
+        <h2 data-aos="fade-up">Pris lista</h2>
+        <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium autem odio optio 
             repellendus temporibus cum, ex quod dolore veniam repellat ab enim perferendis officia 
             alias odit sequi 
             tempora eligendi! Quia! Lorem ipsum dolor sit amet consectetur 
@@ -53,13 +58,13 @@
     </section>
 
     <section class="flexContainerContactForm">
-        <h1>Kontakta oss</h1>
-        <form action="">
+        <h1 data-aos="fade-up">Kontakta oss</h1>
+        <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec">
             <input id="formName" type="text" placeholder="Namn">
             <input id="formEmail" type="email" placeholder="Email"> 
             <input id="formSubject" type="text" placeholder="Subject">
             <input id="formMessage" type="text" placeholder ="Message">
-            <button>Submit</button>
+            <button onclick="sendMail()">Submit</button>
 
         </form>
 
@@ -67,6 +72,13 @@
 <footer>
     <p>Copyright&#169; Creative brush by Pathum&trade;</p>
 </footer>
-    
+
+<!-- https://github.com/michalsnik/aos -->
+<!-- Add script right before closing </body> tag, and initialize AOS: -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({duration: 2000});
+</script>
+
 </body>
 </html>

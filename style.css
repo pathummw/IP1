@@ -10,13 +10,12 @@ body{
 header{
     display: flex;
     flex-wrap: wrap;
-
 }
 nav{
     /* display: flex; */
     align-items: center;
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     padding-top: 50px;
     /* flex-wrap: wrap; */
 }
@@ -26,9 +25,9 @@ li{
     /* border: 1px solid blue; */
 }
 
-li > a{
+li > a , .btnBook{
     text-decoration: none;
-    color: #ebe6e6;
+    color: #2b2a2a;
     font-weight: 300;
     font-size: large;
     display: inline-block; /* To set the padding top & bottom */
@@ -36,9 +35,22 @@ li > a{
     /* border: 1px solid white; */
     border-radius: 10px;
     margin: 0 20px;
-    background-color: rgba(241, 241, 241, 0.123);
+    letter-spacing: 0.15em;
+    transition: 5s; 
+    /* background: rgba(022,20,152,1); */
+    /* background-color: rgba(248, 212, 4); */
    
 }
+
+/* li > a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+} */
 ul{
     display: flex;
     flex-direction: row;
@@ -47,23 +59,23 @@ ul{
     margin: 0 auto;
     /* box-shadow: 5px 4px 15px 1px #000000; */
 }
-li > a:hover{
-    border-bottom: 2px solid darkcyan;
-    color: darkcyan;
-    transition: 0.5s;
-}
+li > a:hover,.btnBook:hover{
+    background-color: #03e9f4;
+    box-shadow:
+    0 0 5px  #03e9f4,
+    0 0 25px  #03e9f4,
+    0 0 50px  #03e9f4,
+    0 0 200px  #03e9f4 ;
+    /* : x offset, y offset, blur size, spread size, color */
 
-
-header{
-    /* background-color: crimson; */
-    /* padding-top: 2vh; */
+    transition: 5s;
 }
 
 section h1{
     font-size: 8vw;   /* test */
     margin-left: 2vw;   /* test */
     font-weight: 900;
-    color: #191919;
+    color: #162c56;
 }
 
 h2{
@@ -88,17 +100,17 @@ p{
 /* flexbox for Hero Image section (Main section) */
 .flexContainerHeroSection{
     display: flex;
-    background-color: #27ae60;
+    /* background-image: linear-gradient(to right top, #111214, #162c56, #3b3f9a, #8743d5, #e81cff); */
     /* background-color: rgb(13, 7, 71); */
     height: 100vh;
-    align-items: flex-end;
-    position: relative;
-    z-index: -1;
+    align-items: center;
+    /* position: relative; */
+    /* z-index: -1; */
+    /* animation: shape 8s ease-in-out infinite; */
 }
 
 .flexContainerHeroSection h1{
-    color: #ffffff;
-
+    color: #162c56;
     font-size: 8vw;   /* test */
     font-weight: 900;
 }
@@ -106,20 +118,31 @@ p{
     color: rgb(167, 164, 164);
 }
 
+.left-half p{
+    padding: 1em 0 1em 0;
+}
 .flexContainerHeroSection .left-half{
     flex: 1;
-    /* background-color: crimson; */
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: crimson;  */
 }
 .flexContainerHeroSection .right-half{
-    flex: 1;
+    flex: 2;
+    background-image: linear-gradient(to right top, #111214, #162c56, #3b3f9a, #8743d5, #e81cff);
+    animation: shape 10s ease-in-out infinite;
+    height: 100%;
     /* border-radius: 80% 10% 10% 50% / 60% 10% 40% 50%;
     background-color: #EF3D59; */    /* test */
 }
 
 @media screen and (max-width: 750px){
-    .flexContainerHeroSection{
+    /* .flexContainerHeroSection{
         flex-direction: column;
-    }
+    } */
+    /* .flexContainerHeroSection .right-half{
+        flex: 100%;
+    } */
 }
 
 @media screen and (max-width: 750px){
@@ -128,46 +151,97 @@ p{
         align-items: center;
         
     }
+    nav{
+        position: static;
+    }
+
+    .flexContainerHeroSection{
+        flex-direction: column-reverse;
+    }
+    li > a{
+        width: 50vw;
+        text-align: center;
+    }
+    .flexContainerHeroSection .right-half{
+        width: 100%;
+    }
+
 }
 
 
 .btnBook{
-    width: 200px;
-    height: 50px;
+    width: 300px;
+    height: 40px;
     padding: 5px 20px;
     border-radius: 10px;
-    background-color: #eecb08;
-    color: rgb(14, 14, 14);
+    background-color: #bfc3c4;
+    color: rgb(85, 84, 84);
     border: none;
     margin-left: 2vw;
     font-family: 'Roboto', sans-serif;
     font-size: larger;
     font-weight: 500;
+    transition: 5s;
 }
-
-.btnBook:hover{
-    background-color: tomato;
-}
-
-
 
 
 /* animation */
 @keyframes shape{
-    from{border-radius: 80% 10% 10% 50% / 60% 10% 40% 50%;}
-    to{border-radius: 10% 40% 10% 50% / 40% 30% 10% 10%;}
+    
+        
+    0%{
+        border-radius: 0% 0% 0% 50% / 0% 0% 0% 90%;
+        
+    }
+    50%{
+        border-radius: 0% 0% 0% 90% / 0% 0% 0% 90%;
+        
+    }
+    100%{
+        border-radius: 0% 0% 0% 50% / 0% 0% 0% 90%;
+        
+    }
 
-    from{border-radius: 30% 50% 10% 50% / 60% 50% 40% 50%;
-        background-color: rgb(7, 248, 135);
+}
+
+@keyframes shapeContactBackground{
+    
+        
+    0%{
+        border-radius: 0% 90% 0% 0% / 0% 90% 0% 0%;
+        
+    }
+    50%{
+        border-radius: 0% 80% 0% 0% / 0% 80% 0% 0%;
+        
+    }
+    100%{
+        border-radius: 0% 90% 0% 0% / 0% 90% 0% 0%;
+        
+    }
+
+}
+
+
+
+    /* from{border-radius: 80% 10% 10% 50% / 60% 10% 40% 50%;}
+    to{border-radius: 10% 40% 10% 50% / 40% 30% 10% 10%;} */
+
+    /* from{border-radius: 0% 0% 0% 40% / 0% 0% 0% 90%;
+        background-color: rgb(7, 248, 136);
         }
-    to{border-radius: 90% 40% 10% 50% / 50% 30% 10% 50%;
-        background-color: rgb(71, 129, 255)}
-}
+    to{border-radius: 0% 0% 0% 90% / 0% 0% 0% 90%;
+        background-color: rgb(86, 137, 248)} */
 
-.flexContainerHeroSection .right-half{
-    /* animation-name: shape;            test
-    animation: shape 5s infinite; */
-}
+
+        /* from{border-radius: 30% 50% 10% 50% / 60% 50% 40% 50%;
+            background-color: rgb(7, 248, 135);
+            }
+        to{border-radius: 90% 40% 10% 50% / 50% 30% 10% 50%;
+            background-color: rgb(71, 129, 255)} */
+
+
+
 
 .right-half img{
     width: 100%;
@@ -269,13 +343,13 @@ background-color: #344E5C; */
     width: 100%;
     height: 7vh;
     border-style: none;
-    box-shadow:0 0 15px 4px rgba(19, 18, 18, 0.06);
-    margin: 10px 0;
+    box-shadow:0 0 15px 4px rgba(19, 18, 18, 0.6);
+    margin: 0.5em 0;
     font-family: 'Roboto', sans-serif;
     font-size: larger;
     font-weight: 300;
     cursor: pointer;
-    padding-left: 10px;
+    padding-left: 0.5em;
     border-radius: 5px;
 
 }
@@ -284,9 +358,9 @@ background-color: #344E5C; */
 .flexContainerContactForm{
     display: flex;
     flex-direction: column;
-    /* background-color:#eecb08; */
-    background-color:#2c3e50;
-    padding: 10vh 0;
+    background-image: linear-gradient(to right top, #111214, #162c56, #3b3f9a, #8743d5, #e81cff);
+    padding: 15vh 0;
+    animation: shapeContactBackground 10s ease-in-out infinite;
 }
 
 .flexContainerContactForm form{
@@ -295,14 +369,27 @@ background-color: #344E5C; */
 }
 
 .flexContainerContactForm button{
-    background-color: rgb(13, 7, 71);
-    color: #FFFFFF;
+    background-color: #03e9f4; 
+    color: #494848;
+    font-weight: 500;
 }
 
 .flexContainerContactForm button:hover{
-    background-color: rgb(43, 37, 88);
     color: #FFFFFF;
+    background-color: #03e9f4; 
+    box-shadow:
+    0 0 5px  #03e9f4,
+    0 0 25px  #03e9f4,
+    0 0 50px  #03e9f4,
+    0 0 200px  #03e9f4 ;
+    /* : x offset, y offset, blur size, spread size, color */
+
+    transition: 5s;
 }
+.flexContainerContactForm h1{
+    color: rgb(255, 255, 255);
+}
+
 input:focus{
     outline-color: rgb(223, 219, 219);
 }
