@@ -5,6 +5,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;   /* disable the horizontal scrollbar */
 }
 
 header{
@@ -31,12 +32,12 @@ li > a , .btnBook{
     font-weight: 300;
     font-size: large;
     display: inline-block; /* To set the padding top & bottom */
-    padding: 5px 20px;
-    /* border: 1px solid white; */
-    border-radius: 10px;
+    padding: 3px 10px;
+    border: 1px solid rgb(201, 194, 194);
+    border-radius: 15px;
     margin: 0 20px;
     letter-spacing: 0.15em;
-    transition: 5s; 
+    /* transition: 5s;  */
     /* background: rgba(022,20,152,1); */
     /* background-color: rgba(248, 212, 4); */
    
@@ -60,35 +61,42 @@ ul{
     /* box-shadow: 5px 4px 15px 1px #000000; */
 }
 li > a:hover,.btnBook:hover{
-    background-color: #03e9f4;
+    background-color: #F92CF5;
     box-shadow:
-    0 0 5px  #03e9f4,
-    0 0 25px  #03e9f4,
-    0 0 50px  #03e9f4,
-    0 0 200px  #03e9f4 ;
+    0 0 5px  #F92CF5,
+    0 0 25px  #F92CF5,
+    0 0 50px  #F92CF5,
+    0 0 200px  #F92CF5 ;
     /* : x offset, y offset, blur size, spread size, color */
 
     transition: 5s;
 }
 
 section h1{
-    font-size: 8vw;   /* test */
-    margin-left: 2vw;   /* test */
+    font-size: 5vw;   /* test */
+    margin-left: 4vw;   /* test */
     font-weight: 900;
     color: #162c56;
 }
 
 h2{
     font-size: 3vw;
-    margin-left: 2vw;   /* test */
+    margin-left: 4vw;   /* test */
     font-weight: 500;
+    color: #2c3e50;
+}
+
+h3{
+    font-size: 2vw;
+    margin-left: 4vw;   /* test */
+    font-weight: 300;
     color: #2c3e50;
 }
 
 p{
     font-weight: 300;
     font-size: 2vw;
-    margin-left: 2vw;
+    margin-left: 4vw;
     color: rgb(57, 57, 58);
 }
 
@@ -111,7 +119,7 @@ p{
 
 .flexContainerHeroSection h1{
     color: #162c56;
-    font-size: 8vw;   /* test */
+    font-size: 5vw;   /* test */
     font-weight: 900;
 }
 .flexContainerHeroSection h2{
@@ -129,13 +137,25 @@ p{
 }
 .flexContainerHeroSection .right-half{
     flex: 2;
-    background-image: linear-gradient(to right top, #111214, #162c56, #3b3f9a, #8743d5, #e81cff);
-    animation: shape 10s ease-in-out infinite;
-    height: 100%;
+    /*background-image: linear-gradient(to right top, #111214, #162c56, #3b3f9a, #8743d5, #e81cff); */
+    /* animation: shape 10s ease-in-out infinite; */
+    background-color: rgba(109, 107, 106, 0.062); 
+    animation: shape 25s ease-in-out infinite;
+    height: 100%; 
     /* border-radius: 80% 10% 10% 50% / 60% 10% 40% 50%;
     background-color: #EF3D59; */    /* test */
 }
 
+.flexContainerHeroSection .right-half .backgroundShape2{
+    width: 60%;
+    height: 80%;
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    background-color: rgba(171, 52, 211, 0.075); 
+    display: inline-block;
+    position: absolute;
+    z-index: -2;
+    animation: backgroundShape2 20s ease-in-out infinite;
+}
 @media screen and (max-width: 750px){
     /* .flexContainerHeroSection{
         flex-direction: column;
@@ -152,7 +172,7 @@ p{
         
     }
     nav{
-        position: static;
+        position: absolute;
     }
 
     .flexContainerHeroSection{
@@ -165,6 +185,25 @@ p{
     .flexContainerHeroSection .right-half{
         width: 100%;
     }
+    .flexContainerHeroSection .left-half{
+        position: relative;
+    }
+
+    section > h1{
+        font-size: 10vw;
+    }
+    .flexContainerHeroSection h1{
+        font-size: 15vw;
+    }
+
+    h2{
+        font-size: 10vw;
+    }
+    .flexContainerHeroSection .right-half{
+        animation: test;   /* Remove later pathum */
+    }
+
+    
 
 }
 
@@ -174,14 +213,15 @@ p{
     height: 40px;
     padding: 5px 20px;
     border-radius: 10px;
-    background-color: #bfc3c4;
-    color: rgb(85, 84, 84);
+    /* background-color: #f0f2f3; */
+    background-image: linear-gradient(to left, #f92cf5, #fe10d3, #fc00b4, #f60097, #eb127e);
+    color: rgb(14, 14, 56);
     border: none;
-    margin-left: 2vw;
+    margin-left: 4vw;
     font-family: 'Roboto', sans-serif;
     font-size: larger;
     font-weight: 500;
-    transition: 5s;
+    /* transition: 5s; */
 }
 
 
@@ -190,38 +230,73 @@ p{
     
         
     0%{
-        border-radius: 0% 0% 0% 50% / 0% 0% 0% 90%;
+        border-radius: 30% 70% 66% 34% / 31% 30% 70% 69% ;
         
     }
     50%{
-        border-radius: 0% 0% 0% 90% / 0% 0% 0% 90%;
+        border-radius: 66% 34% 22% 78% / 42% 30% 70% 58% ;
         
     }
     100%{
-        border-radius: 0% 0% 0% 50% / 0% 0% 0% 90%;
+        border-radius: 30% 70% 66% 34% / 31% 30% 70% 69% ;
         
     }
 
+
 }
+@keyframes backgroundShape2{
+    
+        
+    0%{
+        border-radius: 66% 34% 41% 59% / 68% 38% 62% 32% ;
+        
+    }
+    50%{
+        border-radius: 40% 60% 41% 59% / 41% 60% 40% 59% ;
+        
+    }
+    100%{
+        border-radius: 66% 34% 41% 59% / 68% 38% 62% 32% ;
+        
+    }
+
+} 
 
 @keyframes shapeContactBackground{
     
         
     0%{
-        border-radius: 0% 90% 0% 0% / 0% 90% 0% 0%;
+        border-radius: 54% 46% 41% 59% / 58% 69% 31% 42%;
         
     }
     50%{
-        border-radius: 0% 80% 0% 0% / 0% 80% 0% 0%;
+        border-radius: 36% 64% 28% 72% / 58% 69% 31% 42%;
         
     }
     100%{
-        border-radius: 0% 90% 0% 0% / 0% 90% 0% 0%;
+        border-radius: 54% 46% 41% 59% / 58% 69% 31% 42%;
         
     }
 
 }
 
+@keyframes shapePrisListBackground{
+    
+        
+    0%{
+        border-radius: 54% 46% 41% 59% / 58% 69% 31% 42%;
+        
+    }
+    50%{
+        border-radius: 36% 64% 28% 72% / 58% 69% 31% 42%;
+        
+    }
+    100%{
+        border-radius: 54% 46% 41% 59% / 58% 69% 31% 42%;
+        
+    }
+
+}
 
 
     /* from{border-radius: 80% 10% 10% 50% / 60% 10% 40% 50%;}
@@ -263,9 +338,9 @@ p{
 }
 
 footer{
-    background-color: #01130f;
+    background-color: #021d33;
     color: rgb(248, 245, 248);
-    height: 10vh;
+    height: 30vh;
     text-align: center;
     padding-top: 2vh;
     font-weight: 500;
@@ -336,14 +411,14 @@ background-color: #344E5C; */
 /* ***************end behandling class******************** */
 
 /* *********************Contact us form *********************** */
-.flexContainerContactForm input, button{
+.flexContainerContactForm  input, button{
     /* background-color: tomato;
     color: violet; */
     display: inline-block;
     width: 100%;
     height: 7vh;
     border-style: none;
-    box-shadow:0 0 15px 4px rgba(19, 18, 18, 0.6);
+    box-shadow:0 0 10px 2px rgba(92, 91, 91, 0.103);
     margin: 0.5em 0;
     font-family: 'Roboto', sans-serif;
     font-size: larger;
@@ -358,9 +433,9 @@ background-color: #344E5C; */
 .flexContainerContactForm{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right top, #111214, #162c56, #3b3f9a, #8743d5, #e81cff);
+    background-color: rgba(65, 16, 65, 0.041);
     padding: 15vh 0;
-    animation: shapeContactBackground 10s ease-in-out infinite;
+    animation: shapeContactBackground 15s ease-in-out infinite;
 }
 
 .flexContainerContactForm form{
@@ -387,7 +462,7 @@ background-color: #344E5C; */
     transition: 5s;
 }
 .flexContainerContactForm h1{
-    color: rgb(255, 255, 255);
+    color: #162c56;
 }
 
 input:focus{
@@ -409,6 +484,28 @@ input:focus{
 
 .flexPrisList{
     display: flex;
-    padding: 50vh 0;
-    flex-direction: column;
+    padding: 30vh 0;
+    height: 100vh;
+    background-color: rgba(9, 168, 76, 0.123);
+    animation: shapePrisListBackground 15s ease-in-out infinite;
+    /* flex-direction: column; */
 }
+
+.flexPrisList .left-prisFlex{
+    flex: 1;
+}
+.flexPrisList .right-prisFlex{
+    flex: 1;
+}
+
+.flexHittaHit{
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 0;
+    height: 100vh;
+    background-color: rgba(226, 219, 226, 0.685);  /* Temp Pathum */
+}
+
+/* .map iframe{    /* text fade in 
+    height: 40vh;
+} */

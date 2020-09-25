@@ -17,10 +17,11 @@
     <header>
         <nav>
             <ul>
-                <li><a  href="">Hem</a></li>
-                <li><a  href="">Behandlingar</a></li>
-                <li><a  href="">Boka tid</a></li>
-                <li><a  href="">Hitta hit</a></li>
+                <li><a  href="#hem">Hem</a></li>
+                <li><a  href="#behandlingar">Behandlingar</a></li>
+                <li><a  href="#bokaTid">Boka tid</a></li>
+                <li><a  href="#omMig">Om mig</a></li>
+                <li><a  href="#kontaktaOss">Kontakta oss</a></li>
             </ul>
         </nav>
     </header>
@@ -37,28 +38,64 @@
         </aside>
 
         <aside class="right-half">
+            <span class="backgroundShape2"></span> 
             <div class="time">
-                <span id="txtHour" class="hour"></span>
-                <span id="txtMin" class="min"></span>
+                <!-- <span id="txtHour" class="hour"></span>    TIME
+                <span id="txtMin" class="min"></span> -->
+                 
             </div>
-            <img src="images/image.png" alt="">
+            <img src="images/yoga.png" alt="">
         </aside>
         
     </section>
     
-    <section class="flexPrisList">
-        <h1 data-aos="fade-up" >This is our behandlings</h1>
-        <h2 data-aos="fade-up">Pris lista</h2>
-        <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium autem odio optio 
+    <section class="flexPrisList" id="behandlingar">
+        <div>
+            <h1>Behandlingar</h1>
+        </div>
+        
+        <aside data-aos="fade-right" class="left-prisFlex">
+            <h2>Medicinsk fotvård 30min</h2>
+            <p>Behandlingen startas med en värmande fotbad. Därefter filar vi förhårdnader, 
+                slipar runt nagelfalsen, fräser & slipar naglarna, åtgärdar eventuella liktorna & nageltrång samt utför 
+                all nödvändig medicinsk fotrelaterad vård</p>
+            <h3>Hel behandling 550 kr</h3>  
+        </aside>
+
+        <aside data-aos="fade-left" class="right-prisFlex">
+            <h2>Medicinsk fotvård 60min</h2>
+            <p>Behandlingen startas med ett värmande fotbad, därefter filar vi förhånader, slipar runt nagelfalsen, fräser 
+                och slipar naglarna, åtgärder eventuella liktorna och nageltrång och gör all medicinsk fotrelaterad vård på fötterna. 
+                Behandlingen avslutas med en avslappnade fotmassage + lackning</p>
+            <h3>Del behandling 350 kr</h3>
+        </aside>
+        
+        <!-- <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium autem odio optio 
             repellendus temporibus cum, ex quod dolore veniam repellat ab enim perferendis officia 
             alias odit sequi 
             tempora eligendi! Quia! Lorem ipsum dolor sit amet consectetur 
             adipisicing elit. Consequuntur rem laudantium culpa saepe ullam, quis minus animi accusantium, exercitationem et facere veritatis quisquam! Sequi maiores eveniet rem ad sit 
-            necessitatibus.</p>
+            necessitatibus.</p> -->
+
+        
+
+    </section>
+    <section id="omMig">
+        <h2>Om mig</h2>
+        <p>Vi är en professionell fotvårdskedja belägen i Hagsätra samt Igelbodaplatån i Saltsjöbaden med flera års erfarenhet. Vi utför behandlingar både på privatpersoner samt patienter med remiss då vi samarbetar med landstinget. Vill du låta dina anställda komma på behandlingar? - 
+            Vi samarbetar även med företagskunder. </p>
     </section>
 
-    <section class="flexContainerContactForm">
-        <h1 data-aos="fade-up">Kontakta oss</h1>
+    <section class="flexHittaHit" id="hittaHit">
+        <h2>Anjalee fotvård AB</h2>
+        <h3>Harrgatan 1</h3>
+        <h3>133 42 Saltsjöbaden</h3>
+        <h2>073 756 5 756</h2>
+    </section>
+
+    <section class="flexContainerContactForm" id="kontaktaOss">
+        <h2 data-aos="fade-right">Kontakta oss</h2>
+        
         <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec">
             <input id="formName" type="text" placeholder="Namn">
             <input id="formEmail" type="email" placeholder="Email"> 
@@ -69,12 +106,16 @@
         </form>
 
     </section>
+    <!-- <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.679208984214!2d18.254516814389895!3d59.29357814757484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f7f50cc979341%3A0x16a575ed4298babd!2sHarrgatan%201%2C%20133%2042%20Saltsj%C3%B6baden!5e0!3m2!1ssv!2sse!4v1600897872281!5m2!1ssv!2sse" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section> -->
 <footer>
-    <p>Copyright&#169; Creative brush by Pathum&trade;</p>
+
+    <p>Copyright&#169; DigiCan by Pathum&trade;</p>
 </footer>
 
 <!-- https://github.com/michalsnik/aos -->
-<!-- Add script right before closing </body> tag, and initialize AOS: -->
+<!-- Add script to initialize AOS:-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({duration: 2000});
