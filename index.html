@@ -8,13 +8,22 @@
     <script src="validation.js" defer></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>  <!-- Send email -->
     <script src="email.js" defer></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="hamburgerMenu.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="hamburger.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- This is for implement social media icons -->
     <title>Document</title>
 </head>
-<body onload="startTime()">
+<body >   <!-- onload="startTime()" -->
     <?php include 'mail.php';?>
 
     <header>
+        <div id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <nav>
             <ul>
                 <li><a  href="#hem">Hem</a></li>
@@ -48,26 +57,29 @@
         </aside>
         
     </section>
+
+    
     
     <section class="flexPrisList" id="behandlingar">
         <div>
-            <h1>Behandlingar</h1>
+            <h2>Behandlingar</h2>
         </div>
         
         <aside data-aos="fade-right" class="left-prisFlex">
             <h2>Medicinsk fotvård 30min</h2>
             <p>Behandlingen startas med en värmande fotbad. Därefter filar vi förhårdnader, 
-                slipar runt nagelfalsen, fräser & slipar naglarna, åtgärdar eventuella liktorna & nageltrång samt utför 
-                all nödvändig medicinsk fotrelaterad vård</p>
-            <h3>Hel behandling 550 kr</h3>  
+                slipar runt nagelfalsen, fräser & slipar naglarna, åtgärdar eventuella liktorna & nageltrång.
+                </p>
+            <h3>Hel behandling 550 kr</h3> 
+            <button>Boka tid: 550kr</button> 
         </aside>
 
         <aside data-aos="fade-left" class="right-prisFlex">
             <h2>Medicinsk fotvård 60min</h2>
             <p>Behandlingen startas med ett värmande fotbad, därefter filar vi förhånader, slipar runt nagelfalsen, fräser 
-                och slipar naglarna, åtgärder eventuella liktorna och nageltrång och gör all medicinsk fotrelaterad vård på fötterna. 
-                Behandlingen avslutas med en avslappnade fotmassage + lackning</p>
-            <h3>Del behandling 350 kr</h3>
+                och slipar naglarna, åtgärder eventuella liktorna och nageltrång.</p>
+            <!-- <h3>Del behandling 350 kr</h3> -->
+            <button>Boka tid: 350kr</button> 
         </aside>
         
         <!-- <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium autem odio optio 
@@ -80,10 +92,18 @@
         
 
     </section>
-    <section id="omMig">
-        <h2>Om mig</h2>
-        <p>Vi är en professionell fotvårdskedja belägen i Hagsätra samt Igelbodaplatån i Saltsjöbaden med flera års erfarenhet. Vi utför behandlingar både på privatpersoner samt patienter med remiss då vi samarbetar med landstinget. Vill du låta dina anställda komma på behandlingar? - 
-            Vi samarbetar även med företagskunder. </p>
+    <section class="flexOmMig" id="omMig">
+        <div>
+            <h2>Om mig</h2>
+        </div>
+        <aside class="leftOmMig">
+            <p>Vi är en professionell fotvårdskedja belägen i Hagsätra samt Igelbodaplatån i Saltsjöbaden med flera års erfarenhet. Vi utför behandlingar både på privatpersoner samt patienter med remiss då vi samarbetar med landstinget. Vill du låta dina anställda komma på behandlingar? - 
+                Vi samarbetar även med företagskunder. Jag tog examen 2020 från Axelssons fotvård akademin, Stockholm</p>  
+        </aside>
+
+        <aside class="rightOmMig">
+            <img src="images/axelsonsLogo.jpg" alt="">
+        </aside>  
     </section>
 
     <section class="flexHittaHit" id="hittaHit">
@@ -92,6 +112,23 @@
         <h3>133 42 Saltsjöbaden</h3>
         <h2>073 756 5 756</h2>
     </section>
+
+
+    <!-- ******************************TEST************************************* -->
+    <section class="containerTest">
+        <div>
+            <p>TOPIC</p>
+        </div>
+        <aside class="leftAside">
+            <p>Left Side</p>
+        </aside>
+            
+        <aside class="rightAside">
+            <p>Right Side</p>
+        </aside>
+
+    </section>
+    <!-- *************************END TEST***************************************** -->
 
     <section class="flexContainerContactForm" id="kontaktaOss">
         <h2 data-aos="fade-right">Kontakta oss</h2>
@@ -109,9 +146,18 @@
     <!-- <section class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.679208984214!2d18.254516814389895!3d59.29357814757484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f7f50cc979341%3A0x16a575ed4298babd!2sHarrgatan%201%2C%20133%2042%20Saltsj%C3%B6baden!5e0!3m2!1ssv!2sse!4v1600897872281!5m2!1ssv!2sse" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section> -->
+    
 <footer>
-
+    <section class="socialNetwork">
+        <ul>
+            <li><a href="" class="fa fa-facebook"></a></li>   <!-- fa is font awsome own classes -->
+            <li><a href="" class="fa fa-instagram"></a></li>
+            <li><a href="" class="fa fa-youtube"></a></li>
+        </ul>
+    </section>
+    
     <p>Copyright&#169; DigiCan by Pathum&trade;</p>
+    
 </footer>
 
 <!-- https://github.com/michalsnik/aos -->

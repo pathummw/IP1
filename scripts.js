@@ -10,7 +10,7 @@ function startTime(){
     document.getElementById('txtHour').innerHTML = h;
     document.getElementById('txtMin').innerHTML = m;
 
-    var t = setTimeout(startTime, 500);
+    var t = setTimeout(startTime, 10000);
 }
 
 /* function btnMouseOut(){
@@ -40,4 +40,8 @@ function mouseHover(){
 
     btn.style.transition =  "1s";
 } */
+
+/* let a = document.querySelectorAll("p");
+a[0].style.backgroundColor = 'red';
+a[1].style.backgroundColor = "blue"; */
 

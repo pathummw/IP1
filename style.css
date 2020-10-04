@@ -60,7 +60,7 @@ ul{
     margin: 0 auto;
     /* box-shadow: 5px 4px 15px 1px #000000; */
 }
-li > a:hover,.btnBook:hover{
+li > a:hover,.btnBook:hover, .flexContainerContactForm button:hover{
     background-color: #F92CF5;
     box-shadow:
     0 0 5px  #F92CF5,
@@ -69,7 +69,8 @@ li > a:hover,.btnBook:hover{
     0 0 200px  #F92CF5 ;
     /* : x offset, y offset, blur size, spread size, color */
 
-    transition: 5s;
+    transition: 1s;
+    border: rgba(253, 245, 230, 0) 1px solid; /* transparent border to overide border */
 }
 
 section h1{
@@ -153,15 +154,20 @@ p{
     background-color: rgba(171, 52, 211, 0.075); 
     display: inline-block;
     position: absolute;
-    z-index: -2;
+    z-index: -5;
     animation: backgroundShape2 20s ease-in-out infinite;
 }
-@media screen and (max-width: 750px){
+@media screen and (min-width: 750px){
     /* .flexContainerHeroSection{
         flex-direction: column;
     } */
     /* .flexContainerHeroSection .right-half{
         flex: 100%;
+        
+    } */
+
+    /* nav{
+        visibility: visible;
     } */
 }
 
@@ -202,9 +208,7 @@ p{
     .flexContainerHeroSection .right-half{
         animation: test;   /* Remove later pathum */
     }
-
     
-
 }
 
 
@@ -215,7 +219,7 @@ p{
     border-radius: 10px;
     /* background-color: #f0f2f3; */
     background-image: linear-gradient(to left, #f92cf5, #fe10d3, #fc00b4, #f60097, #eb127e);
-    color: rgb(14, 14, 56);
+    color: rgb(250, 250, 255);
     border: none;
     margin-left: 4vw;
     font-family: 'Roboto', sans-serif;
@@ -317,7 +321,6 @@ p{
 
 
 
-
 .right-half img{
     width: 100%;
     height: auto;
@@ -338,7 +341,8 @@ p{
 }
 
 footer{
-    background-color: #021d33;
+    /* background-image: linear-gradient(to top, #2d012c, #410238, #570443, #6f054d, #870655); */
+    background-color: #2d012c;
     color: rgb(248, 245, 248);
     height: 30vh;
     text-align: center;
@@ -351,6 +355,7 @@ footer p{
     font-weight: 100;
     font-size: medium;
     color: rgb(236, 236, 236);
+    margin : 1em 0;
 }
 /* background-color: #EF3D59;
 background-color: #E17A47;
@@ -444,19 +449,19 @@ background-color: #344E5C; */
 }
 
 .flexContainerContactForm button{
-    background-color: #03e9f4; 
-    color: #494848;
+    background-image: linear-gradient(to left, #f92cf5, #fe10d3, #fc00b4, #f60097, #eb127e);
+    color: #f8f7f7;
     font-weight: 500;
 }
 
 .flexContainerContactForm button:hover{
-    color: #FFFFFF;
+    /* color: #FFFFFF;
     background-color: #03e9f4; 
     box-shadow:
     0 0 5px  #03e9f4,
     0 0 25px  #03e9f4,
     0 0 50px  #03e9f4,
-    0 0 200px  #03e9f4 ;
+    0 0 200px  #03e9f4 ; */
     /* : x offset, y offset, blur size, spread size, color */
 
     transition: 5s;
@@ -486,16 +491,33 @@ input:focus{
     display: flex;
     padding: 30vh 0;
     height: 100vh;
-    background-color: rgba(9, 168, 76, 0.123);
-    animation: shapePrisListBackground 15s ease-in-out infinite;
+    /* background-color: rgba(9, 168, 76, 0.123); */
+    /* animation: shapePrisListBackground 15s ease-in-out infinite; */
+    flex-wrap: wrap;
+    /* background-color: rgb(250, 210, 250); */
     /* flex-direction: column; */
+}
+
+.flexPrisList div{
+    width: 100vw;
+    /* background-color: orange; */
 }
 
 .flexPrisList .left-prisFlex{
     flex: 1;
+    margin: 3vw;
+    padding: 2em;
+    /* box-shadow: 0 4px 8px 0 rgba(167, 167, 167, 0.2), 0 6px 20px 0 rgba(182, 182, 182, 0.19); */
+    text-align: justify;
+    background-color: rgb(238, 236, 236);
 }
 .flexPrisList .right-prisFlex{
     flex: 1;
+    background-color: rgb(243, 255, 241);
+    margin: 3vw;
+    padding: 2em;
+    /* box-shadow: 0 4px 8px 0 rgba(167, 167, 167, 0.2), 0 6px 20px 0 rgba(182, 182, 182, 0.19); */
+    text-align: justify;
 }
 
 .flexHittaHit{
@@ -503,9 +525,105 @@ input:focus{
     flex-direction: column;
     padding: 10vh 0;
     height: 100vh;
-    background-color: rgba(226, 219, 226, 0.685);  /* Temp Pathum */
+    /* background-color: rgba(226, 219, 226, 0.685);  */ /* Temp Pathum */
 }
 
+.flexPrisList button{    /* //Override button style */
+    
+    width: 90%;
+    height: 7vh;
+    box-shadow:none;   /* override contact form button shadow */
+    margin: 4vw;
+    background-color: rgb(7, 185, 36);
+    color: white;
+    /* display: inline-block; */
+}
+
+.left-prisFlex button{
+    /* align-self: flex-end; */
+}
+.right-prisFlex button{
+}
 /* .map iframe{    /* text fade in 
     height: 40vh;
 } */
+
+.flexOmMig{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexOmMig div{
+    width: 100vw;
+    /* background-color: rgb(77, 187, 63); */
+}
+.flexOmMig .leftOmMig{
+    flex: 1;
+    display: flex;
+    text-align: justify;
+    margin: 0 50px;   /* TEST Pathum */
+    /* background-color: rgb(97, 170, 253); */
+    
+}
+.flexOmMig .rightOmMig{
+    flex: 1;
+    display: flex;
+    /* background-color: rgb(169, 233, 161); */
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    
+}
+.flexOmMig img{
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.containerTest{
+    background-color: maroon;
+    display: flex;
+    height: 50vh;
+    flex-wrap: wrap;
+}
+
+.containerTest div{
+    background-color: mediumaquamarine;
+    height: 10vh;
+    width: 100vw;
+}
+.containerTest .leftAside{
+    background-color: midnightblue;
+    height: 100%;
+}
+.containerTest .rightAside{
+    background-color: orange;
+    height: 10vh;
+}
+
+
+.socialNetwork ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+.socialNetwork a{
+    font-size: 2vw;
+    color: #fdfdfd;
+    margin: 2em 1em;
+    padding: 0.1em;
+    /* border-radius: 50%; */
+    text-decoration: none;
+    border: none;
+}
+.fa:hover {
+    opacity: 0.7;
+    /* background-color: #2f4ed4;
+    box-shadow:
+    0 0 5px  #2f4ed4,
+    0 0 25px  #2f4ed4,
+    0 0 50px  #2f4ed4,
+    0 0 200px  #2f4ed4 ; */
+    /* : x offset, y offset, blur size, spread size, color */
+    color: rgb(31, 30, 30);
+    transition: 1s;
+}

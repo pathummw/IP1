@@ -1,0 +1,80 @@
+/* span{
+    background-color: rgb(92, 201, 19);
+    width: 50px;
+    height: 10px;
+    position: absolute;
+}
+
+.hamburger:nth-child(1){
+    background-color: teal;
+    width: 30px;
+    height: 2px;
+}
+.hamburger:nth-child(2){
+    margin-top: 10px;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(128, 26, 0);
+}
+.hamburger:nth-child(3){
+    margin-top: 20px;
+    background-color: rgb(51, 10, 230);
+} */
+
+.hamburger{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(209, 203, 203);
+    border-radius: 50%;
+    position: relative;
+    visibility: hidden;
+    /* z-index: -20; */
+}
+
+.hamburger span{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: rgb(63, 58, 63);
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 12px;
+    transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1){
+    top: 0px;
+}
+.hamburger span:nth-child(2){
+    top: 10px;
+}
+.hamburger span:nth-child(3){
+    top: 20px;
+}
+
+
+.hamburger:hover span{    /* On hover hamburger ,change the span color */
+    background-color: rgb(196, 14, 126);
+}
+.hamburger:hover{
+    background-color: rgb(36, 34, 34);
+}
+
+/* .hamburger.open span:nth-child(1){
+    transform: rotate(135deg);
+} */
+
+
+@media screen and (max-width: 810px){
+    .hamburger{
+        visibility:visible; 
+    }
+    nav{
+        visibility: hidden;
+    } 
+}
+
+
+
+
+/* https://codepen.io/designcouch/pen/Atyop */
