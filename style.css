@@ -43,15 +43,7 @@ li > a , .btnBook{
    
 }
 
-/* li > a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-} */
+
 ul{
     display: flex;
     flex-direction: row;
@@ -157,19 +149,6 @@ p{
     z-index: -5;
     animation: backgroundShape2 20s ease-in-out infinite;
 }
-@media screen and (min-width: 750px){
-    /* .flexContainerHeroSection{
-        flex-direction: column;
-    } */
-    /* .flexContainerHeroSection .right-half{
-        flex: 100%;
-        
-    } */
-
-    /* nav{
-        visibility: visible;
-    } */
-}
 
 @media screen and (max-width: 750px){
     ul > li{
@@ -208,7 +187,22 @@ p{
     .flexContainerHeroSection .right-half{
         animation: test;   /* Remove later pathum */
     }
-    
+    .flexOmMig{
+        flex-direction: column;
+    }
+   /*  .socialNetwork ul{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    } */
+    .socialNetwork ul>li{    /* NEED TO CHECK */
+        width: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .socialNetwork{
+        align-items: center;
+        flex-wrap: nowrap;
+    }
 }
 
 
@@ -344,7 +338,7 @@ footer{
     /* background-image: linear-gradient(to top, #2d012c, #410238, #570443, #6f054d, #870655); */
     background-color: #2d012c;
     color: rgb(248, 245, 248);
-    height: 30vh;
+    /* height: 30vh; */
     text-align: center;
     padding-top: 2vh;
     font-weight: 500;
@@ -490,7 +484,7 @@ input:focus{
 .flexPrisList{
     display: flex;
     padding: 30vh 0;
-    height: 100vh;
+    /* height: 100vh; */
     /* background-color: rgba(9, 168, 76, 0.123); */
     /* animation: shapePrisListBackground 15s ease-in-out infinite; */
     flex-wrap: wrap;
@@ -523,7 +517,10 @@ input:focus{
 .flexHittaHit{
     display: flex;
     flex-direction: column;
-    padding: 10vh 0;
+    padding: 5vh 0;
+    background-color: rgb(227, 236, 226);
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */    
     height: 100vh;
     /* background-color: rgba(226, 219, 226, 0.685);  */ /* Temp Pathum */
 }
@@ -551,6 +548,7 @@ input:focus{
 .flexOmMig{
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
 }
 .flexOmMig div{
     width: 100vw;
@@ -560,7 +558,9 @@ input:focus{
     flex: 1;
     display: flex;
     text-align: justify;
-    margin: 0 50px;   /* TEST Pathum */
+    background-color: rgb(229, 230, 228);
+    margin: 3vw;
+    padding: 2em;
     /* background-color: rgb(97, 170, 253); */
     
 }
@@ -577,28 +577,6 @@ input:focus{
     height: auto;
     border-radius: 50%;
 }
-
-.containerTest{
-    background-color: maroon;
-    display: flex;
-    height: 50vh;
-    flex-wrap: wrap;
-}
-
-.containerTest div{
-    background-color: mediumaquamarine;
-    height: 10vh;
-    width: 100vw;
-}
-.containerTest .leftAside{
-    background-color: midnightblue;
-    height: 100%;
-}
-.containerTest .rightAside{
-    background-color: orange;
-    height: 10vh;
-}
-
 
 .socialNetwork ul{
     display: flex;
