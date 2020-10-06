@@ -164,8 +164,14 @@ p{
         flex-direction: column-reverse;
     }
     li > a{
-        width: 50vw;
+        width: 100vw;
         text-align: center;
+        border-radius: 0;
+        margin: 0;
+        padding: 0.5em 0;
+        background-color: rgba(24, 23, 23, 0.493);
+        color: mistyrose;
+
     }
     .flexContainerHeroSection .right-half{
         width: 100%;
@@ -180,9 +186,20 @@ p{
     .flexContainerHeroSection h1{
         font-size: 15vw;
     }
+    .flexContainerHeroSection h2{
+        text-align: left;
+    }
 
     h2{
         font-size: 10vw;
+        text-align: center;
+    }
+    h3{
+        font-size: 7vw;
+    }
+    p{
+        color: rgb(78, 78, 78);
+        font-size: 5vw;
     }
     .flexContainerHeroSection .right-half{
         animation: test;   /* Remove later pathum */
@@ -190,19 +207,18 @@ p{
     .flexOmMig{
         flex-direction: column;
     }
-   /*  .socialNetwork ul{
-        flex-direction: row;
-        flex-wrap: nowrap;
-    } */
-    .socialNetwork ul>li{    /* NEED TO CHECK */
+    .flexContainerContactForm{
+        flex-direction: column;
+    }
+    .socialNetwork ul li a{
+        display: block;
+        font-size: 4vw;
         width: 20px;
-        justify-content: center;
-        align-items: center;
     }
-    .socialNetwork{
-        align-items: center;
-        flex-wrap: nowrap;
-    }
+
+
+
+
 }
 
 
@@ -348,69 +364,18 @@ footer{
 footer p{
     font-weight: 100;
     font-size: medium;
-    color: rgb(236, 236, 236);
-    margin : 1em 0;
+    color: rgb(209, 206, 206);
+    padding: 1em 0;
 }
-/* background-color: #EF3D59;
-background-color: #E17A47;
-background-color: #EFC958;
-background-color: #4AB19D;
-background-color: #344E5C; */
-
-
-/* behandling class */
-/* .fadeInUp{
-    background-color:wheat;
-    height: 100vh;
-    
+footer a{
+    text-decoration: none;
+    color: rgb(197, 11, 11);
+    font-size: medium;
+    font-weight: 900;
 }
-
-
-@keyframes fadeInUp {
-    from {
-        transform: translate3d(0,40px,0)
-    }
-
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
-}
-
-@-webkit-keyframes fadeInUp {
-    from {
-        transform: translate3d(0,40px,0)
-    }
-
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
-}
-
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: both
-}
-
-.animatedFadeInUp {
-    opacity: 0
-}
-
-.fadeInUp {
-    opacity: 0;
-    animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
-}
-
-     */
-
-/* ***************end behandling class******************** */
 
 /* *********************Contact us form *********************** */
-.flexContainerContactForm  input, button{
+.flexContainerContactForm  input, button, textarea{
     /* background-color: tomato;
     color: violet; */
     display: inline-block;
@@ -427,20 +392,46 @@ background-color: #344E5C; */
     border-radius: 5px;
 
 }
-
+.flexContainerContactForm textarea{
+    height: 20vh;
+    resize: none;
+}
+input,textarea:focus{
+    outline-color: rgb(223, 219, 219);
+}
 
 .flexContainerContactForm{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     background-color: rgba(65, 16, 65, 0.041);
     padding: 15vh 0;
     animation: shapeContactBackground 15s ease-in-out infinite;
 }
 
-.flexContainerContactForm form{
+.flexContainerContactForm .left-Contact{
+    flex: 1;
+    display: flex;
+    text-align: justify;
+    /* background-color: rgb(229, 230, 228); */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexContainerContactForm .right-Contact{
+    flex: 1;
+    display: flex;
+    margin: 3vw;
+    /* background-color: pink; */
+}
+.flexContainerContactForm div{
+    width: 100vw;
+}
+
+/* .flexContainerContactForm form{
     margin: 0 auto;  
     width: 70vw;
-}
+} */
 
 .flexContainerContactForm button{
     background-image: linear-gradient(to left, #f92cf5, #fe10d3, #fc00b4, #f60097, #eb127e);
@@ -460,13 +451,11 @@ background-color: #344E5C; */
 
     transition: 5s;
 }
-.flexContainerContactForm h1{
+/* .flexContainerContactForm h1{
     color: #162c56;
-}
+} */
 
-input:focus{
-    outline-color: rgb(223, 219, 219);
-}
+
 /* contact form validation */
 /* input[type=email]{
     /* background-color: turquoise; 
@@ -558,7 +547,7 @@ input:focus{
     flex: 1;
     display: flex;
     text-align: justify;
-    background-color: rgb(229, 230, 228);
+    background-color: rgba(233, 243, 223, 0.568);
     margin: 3vw;
     padding: 2em;
     /* background-color: rgb(97, 170, 253); */
@@ -593,6 +582,10 @@ input:focus{
     text-decoration: none;
     border: none;
 }
+.socialNetwork ul li{
+    display: inline-block;
+    width: 50px;
+}
 .fa:hover {
     opacity: 0.7;
     /* background-color: #2f4ed4;
@@ -604,4 +597,22 @@ input:focus{
     /* : x offset, y offset, blur size, spread size, color */
     color: rgb(31, 30, 30);
     transition: 1s;
+}
+
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill
+/* input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, */
+/* textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus  */{
+  /* border: 1px solid green; */
+  /* -webkit-text-fill-color: green; */
+  /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: maroon;
 }

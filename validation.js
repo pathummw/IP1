@@ -18,6 +18,7 @@ email.addEventListener("input", function(event){
 name.addEventListener("input",function(event){
     checkTextField(name,50);
 }); 
+ 
 
 subject.addEventListener("input",function(event){
     checkTextField(subject,100);
@@ -38,8 +39,8 @@ function checkTextField(txtName, length){   /* Validation function to common tex
     }
 }
 function setOKStyle(inputName){
-    inputName.style.backgroundColor = "#CAFFBF";
     inputName.style.outlineColor = "#4AB19D";
+    inputName.style.backgroundColor = "#CAFFBF";
 }
 
 function setErrStyle(inputName){

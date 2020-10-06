@@ -39,9 +39,12 @@
 @media screen and (max-width: 750px){
     nav{
         flex-direction: column;
+        position: fixed;
+        
     }
     .hamburger{
         visibility: visible;
+        position: fixed;
     } 
 }
 /* https://codepen.io/designcouch/pen/Atyop */

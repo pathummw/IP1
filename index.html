@@ -12,10 +12,40 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="hamburger.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- This is for implement social media icons -->
-    <title>Document</title>
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+
+    <title>Anjalee Fotvård</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_fplHSNNvIeCHoMQCULkRK');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            console.log("function call");
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                //this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this);
+                console.log("Email sent");
+            });
+        }
+    </script>
+
 </head>
 <body >   <!-- onload="startTime()" -->
-    <?php include 'mail.php';?>
+
 
     <header>
         <div id="hamburger" class="hamburger">
@@ -119,16 +149,29 @@
 
 
     <section class="flexContainerContactForm" id="kontaktaOss">
-        <h2 data-aos="fade-right">Kontakta oss</h2>
+        <div>
+            <h2 data-aos="fade-right">Kontakta mig</h2>
+        </div>
         
-        <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec">
-            <input id="formName" type="text" placeholder="Namn">
-            <input id="formEmail" type="email" placeholder="Email"> 
-            <input id="formSubject" type="text" placeholder="Subject">
-            <input id="formMessage" type="text" placeholder ="Message">
-            <button onclick="sendMail()">Submit</button>
+        <aside class="left-Contact">
+            <h3>Harrgatan 1</h3>
+            <h3>133 42 Saltsjöbaden</h3>
+            <h2>073 756 5 756</h2>
+        </aside>
 
-        </form>
+
+        <aside class="right-Contact">
+            <form id="contact-form" method="post" name="myemailform" action="mail.php">   <!-- action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec" -->
+                <input id="formName" type="text" placeholder="Namn">
+                <input id="formEmail" type="email" placeholder="Email"> 
+                <input id="formSubject" type="text" placeholder="Subject">
+                <textarea id="formMessage" type="text" placeholder ="Message"></textarea>
+                <button type="submit" value="Send Form">Submit</button>   <!-- onclick="sendMail()" -->
+    
+            </form>
+        </aside>
+        
+        
 
     </section>
     <!-- <section class="map">
@@ -144,7 +187,7 @@
         </ul>
     </section>
     
-    <p>Copyright&#169; DigiCan by Pathum&trade;</p>
+    <p>Copyright&#169; <a href="http://digican.se/">DigiCan&trade;</a> by Pathum.</p>
     
 </footer>
 
