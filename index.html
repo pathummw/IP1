@@ -10,13 +10,12 @@
     <script src="email.js" defer></script>
     <link rel="stylesheet" href="hamburgerMenu.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel='shortcut icon' href='images/foot.png' type="image/png">
     <script src="hamburger.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- This is for implement social media icons -->
 
-
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-
+    
 
     <title>Anjalee Fotvård</title>
 
@@ -60,7 +59,7 @@
                 <li><a  href="#behandlingar">Behandlingar</a></li>
                 <li><a  href="#bokaTid">Boka tid</a></li>
                 <li><a  href="#omMig">Om mig</a></li>
-                <li><a  href="#kontaktaOss">Kontakta oss</a></li>
+                <li><a  href="#kontaktaOss">Kontakta mig</a></li>
             </ul>
         </nav>
     </header>
@@ -71,7 +70,7 @@
             
             <h1 id="name">Anjalee</h1>
             <h2>Fotvård</h2>
-            <p>Lorem ipsum dolor srum. Quod quis et quo cumque dignissimos minus ad?</p>
+            <p>Din fötternas idol. Det är dags att ge nytt liv till din sköna och fina fötter.</p>
             <button class="btnBook">Book now</button>
             
         </aside>
@@ -128,7 +127,24 @@
             <h2>Om mig</h2>
         </div>
         <aside data-aos="fade-right" class="leftOmMig">
-            <p>Jag heter Anjalee Loku Kankanamge Don. Jag är lung, ansvarsfull, trevlig tjej som har jobbat inom vården nästan 10 år som undersköterska. Den 4 maj 2020 började jag läsa om fotterapeut utbildningen i Axelsons institutet. </p>  
+            <div>
+                <p> Jag heter Anjalee Loku Kankanamge Don. Jag är lung, ansvarsfull, trevlig tjej som har jobbat inom vården nästan 
+                    10 år som undersköterska. 
+                    Den 4 maj 2020 började jag läsa om 
+                    fotterapeut utbildningen i Axelsons institutet. </p>
+            </div>
+            <div class="omMigList">
+                <h3>Hos mig får du hjälp med: </h3>
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Förhårdnader</p>
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Liktornar</p>
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Nageltrång</p>
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Kartnaglar</p>
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Fot och nagelsvamp</p>
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Vårtor</p>
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Hälsprickor</p>
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;Silikonavlastning</p>
+            </div>
+            
         </aside>
 
         <aside data-aos="fade-left" class="rightOmMig">
@@ -136,40 +152,39 @@
         </aside>  
     </section>
 
-    <section class="flexHittaHit" id="hittaHit">
-        <h2>Anjalee fotvård AB</h2>
-        <aside>
-            <h3>Harrgatan 1</h3>
-            <h3>133 42 Saltsjöbaden</h3>
-            <h2>073 756 5 756</h2>
-        </aside>     
+    <section class="flexHittaHit"  data-aos="fade-up" id="hittaHit">
+            <h2>Anjalee fotvård AB</h2>
+            <h3><i class="fa fa-map-marker"></i>&nbsp;Harrgatan 1 &nbsp;&nbsp;Saltsjöbaden</h3>
+            <h3><i class="fa fa-phone"></i>&nbsp;073 756 5 756</h3> 
+            <h3><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;anjalee90@hotmail.com</h3>   
     </section>
 
 
 
 
-    <section class="flexContainerContactForm" id="kontaktaOss">
+    <section class="flexContainerContactForm"  id="kontaktaOss">
         <div>
-            <h2 data-aos="fade-right">Kontakta mig</h2>
+            <h2>Kontakta mig</h2>
         </div>
         
-        <aside class="left-Contact">
-            <h3>Harrgatan 1</h3>
+       <!--  <aside class="left-Contact">
+            <h2><i class="fa fa-adn"></i>Anjalee fotvård AB</h2>
+            <h3><i class="fa fa-map-marker"></i> Harrgatan 1</h3>
             <h3>133 42 Saltsjöbaden</h3>
-            <h2>073 756 5 756</h2>
-        </aside>
+            <h2><i class="fa fa-phone"></i> 073 756 5 756</h2>
+        </aside> -->
 
 
-        <aside class="right-Contact">
-            <form id="contact-form" method="post" name="myemailform" action="mail.php">   <!-- action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec" -->
+        <!-- <aside class="right-Contact"> -->
+            <form data-aos="fade-up" id="contact-form" method="post" name="myemailform" action="mail.php">   <!-- action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec" -->
                 <input id="formName" type="text" placeholder="Namn">
                 <input id="formEmail" type="email" placeholder="Email"> 
-                <input id="formSubject" type="text" placeholder="Subject">
+                <input id="formSubject" type="text"  placeholder="Subject">
                 <textarea id="formMessage" type="text" placeholder ="Message"></textarea>
                 <button type="submit" value="Send Form">Submit</button>   <!-- onclick="sendMail()" -->
     
             </form>
-        </aside>
+        <!-- </aside> -->
         
         
 
@@ -180,14 +195,14 @@
     
 <footer>
     <section class="socialNetwork">
-        <ul>
-            <li><a href="" class="fa fa-facebook"></a></li>   <!-- fa is font awsome own classes -->
-            <li><a href="" class="fa fa-instagram"></a></li>
-            <li><a href="" class="fa fa-youtube"></a></li>
-        </ul>
+        <!-- <ul> -->
+            <a href="" class="fa fa-facebook"></a>   <!-- fa is font awsome own classes -->
+            <a href="" class="fa fa-instagram"></a>
+            <a href="" class="fa fa-youtube"></a>
+        <!-- </ul> -->
     </section>
     
-    <p>Copyright&#169; <a href="http://digican.se/">DigiCan&trade;</a> by Pathum.</p>
+    <p>Copyright&#169; <a href="http://digican.se/">Digi<span>Can</span>&trade;</a> by Pathum.</p>
     
 </footer>
 

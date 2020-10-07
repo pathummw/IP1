@@ -62,7 +62,6 @@ li > a:hover,.btnBook:hover, .flexContainerContactForm button:hover{
     /* : x offset, y offset, blur size, spread size, color */
 
     transition: 1s;
-    border: rgba(253, 245, 230, 0) 1px solid; /* transparent border to overide border */
 }
 
 section h1{
@@ -204,18 +203,33 @@ p{
     .flexContainerHeroSection .right-half{
         animation: test;   /* Remove later pathum */
     }
-    .flexOmMig{
-        flex-direction: column;
-    }
     .flexContainerContactForm{
         flex-direction: column;
     }
-    .socialNetwork ul li a{
-        display: block;
-        font-size: 4vw;
-        width: 20px;
+    
+    /* .flexOmMig{
+        flex-direction: column;  
+        background-color: tomato;
+        
     }
-
+    .flexOmMig h2{
+        text-align: center;
+        background-color: turquoise;
+        margin-bottom: 10em;
+    }
+    .flexOmMig .leftOmMig{
+        background-color: teal;
+        margin-left: 10px;
+        padding-left: 10px;
+        width: 100vw;
+    } */
+    /* .flexOmMig .leftOmMig{
+    /* background-color: rgb(243, 255, 241); 
+    flex-direction: row;
+    width: 100vw;
+    margin: 3em 3vw;
+    padding: 0 2em;
+    text-align: justify;} */
 
 
 
@@ -366,12 +380,45 @@ footer p{
     font-size: medium;
     color: rgb(209, 206, 206);
     padding: 1em 0;
+    margin: 0 auto;
 }
 footer a{
     text-decoration: none;
     color: rgb(197, 11, 11);
     font-size: medium;
     font-weight: 900;
+}
+footer p span{
+    color: rgb(223, 224, 224);
+}
+
+.socialNetwork a{
+    display: flex;
+    font-size: 2vw;
+    color: #c4c1c169;
+    text-decoration: none;
+    border: none;
+    height: 1.5em;  
+    width: 1.5em;
+    border-radius: 50%;
+    align-items: center;justify-content: center;
+    margin: 0 1em;
+}
+
+.socialNetwork{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialNetwork a:hover{
+    background-color: #F92CF5;
+    box-shadow:
+    0 0 5px  #F92CF5,
+    0 0 25px  #F92CF5,
+    0 0 50px  #F92CF5,
+    0 0 200px  #F92CF5 ;
+
+    transition: 1s;
 }
 
 /* *********************Contact us form *********************** */
@@ -404,28 +451,30 @@ input,textarea:focus{
     display: flex;
     flex-wrap: wrap;
     /* flex-direction: column; */
-    background-color: rgba(65, 16, 65, 0.041);
+    /* background-color: rgba(65, 16, 65, 0.041); */
     padding: 15vh 0;
     animation: shapeContactBackground 15s ease-in-out infinite;
+    justify-content: center;
 }
 
-.flexContainerContactForm .left-Contact{
+/* .flexContainerContactForm .left-Contact{
     flex: 1;
     display: flex;
     text-align: justify;
-    /* background-color: rgb(229, 230, 228); */
+    /* background-color: rgb(229, 230, 228); 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.flexContainerContactForm .right-Contact{
+} */
+/* .flexContainerContactForm .right-Contact{
     flex: 1;
     display: flex;
     margin: 3vw;
-    /* background-color: pink; */
-}
+    /* background-color: pink; 
+} */
 .flexContainerContactForm div{
     width: 100vw;
+    margin-bottom: 2em;
 }
 
 /* .flexContainerContactForm form{
@@ -472,13 +521,8 @@ input,textarea:focus{
 
 .flexPrisList{
     display: flex;
-    padding: 30vh 0;
-    /* height: 100vh; */
-    /* background-color: rgba(9, 168, 76, 0.123); */
-    /* animation: shapePrisListBackground 15s ease-in-out infinite; */
     flex-wrap: wrap;
-    /* background-color: rgb(250, 210, 250); */
-    /* flex-direction: column; */
+    margin-top: 40vh;
 }
 
 .flexPrisList div{
@@ -492,7 +536,7 @@ input,textarea:focus{
     padding: 2em;
     /* box-shadow: 0 4px 8px 0 rgba(167, 167, 167, 0.2), 0 6px 20px 0 rgba(182, 182, 182, 0.19); */
     text-align: justify;
-    background-color: rgb(238, 236, 236);
+    background-color: rgb(243, 255, 241);
 }
 .flexPrisList .right-prisFlex{
     flex: 1;
@@ -513,6 +557,15 @@ input,textarea:focus{
     height: 100vh;
     /* background-color: rgba(226, 219, 226, 0.685);  */ /* Temp Pathum */
 }
+.flexHittaHit i{
+    font-size: 0.75em;
+    color: rgb(165, 165, 165);
+}
+
+.flexHittaHit h2{
+    margin-bottom: 0.5em;
+    font-size: 4em;
+}
 
 .flexPrisList button{    /* //Override button style */
     
@@ -523,6 +576,9 @@ input,textarea:focus{
     background-color: rgb(7, 185, 36);
     color: white;
     /* display: inline-block; */
+}
+.flexPrisList button:hover{
+    background-color: rgba(1, 153, 27, 0.993);
 }
 
 .left-prisFlex button{
@@ -538,54 +594,46 @@ input,textarea:focus{
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
+    /* flex-direction: column; */
+    margin-top: 10vh;
 }
 .flexOmMig div{
-    width: 100vw;
+    width: 50vw;
     /* background-color: rgb(77, 187, 63); */
 }
 .flexOmMig .leftOmMig{
     flex: 1;
     display: flex;
+    /* background-color: rgb(243, 255, 241); */
+    flex-direction: column;
+    width: 50vw;
+    margin: 3em 3vw;
+    padding: 0 2em;
     text-align: justify;
-    background-color: rgba(233, 243, 223, 0.568);
-    margin: 3vw;
-    padding: 2em;
-    /* background-color: rgb(97, 170, 253); */
     
 }
 .flexOmMig .rightOmMig{
     flex: 1;
     display: flex;
-    /* background-color: rgb(169, 233, 161); */
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
-    
+    margin: 3vw;
+    padding: 2em;
+    /* box-shadow: 0 4px 8px 0 rgba(167, 167, 167, 0.2), 0 6px 20px 0 rgba(182, 182, 182, 0.19); */
+    text-align: justify;
+
+}
+.omMigList p{
+    margin: 0.5em 3em;
+    font-size: 1.5em;
 }
 .flexOmMig img{
-    width: 30%;
+    width: 50%;
     height: auto;
     border-radius: 50%;
 }
 
-.socialNetwork ul{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: center;
-}
-.socialNetwork a{
-    font-size: 2vw;
-    color: #fdfdfd;
-    margin: 2em 1em;
-    padding: 0.1em;
-    /* border-radius: 50%; */
-    text-decoration: none;
-    border: none;
-}
-.socialNetwork ul li{
-    display: inline-block;
-    width: 50px;
-}
+
 .fa:hover {
     opacity: 0.7;
     /* background-color: #2f4ed4;
@@ -616,3 +664,8 @@ select:-webkit-autofill:focus  */{
   transition: background-color 5000s ease-in-out 0s;
   background-color: maroon;
 }
+
+
+.fontAwesome {
+    font-family: 'Helvetica', FontAwesome, sans-serif;
+  }

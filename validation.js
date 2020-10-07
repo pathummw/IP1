@@ -7,10 +7,9 @@ const message = document.getElementById("formMessage");
 email.addEventListener("input", function(event){
     if(email.validity.typeMismatch){
         setErrStyle(email);
-        email.setCustomValidity("I am expecting an email address..!");
+        email.setCustomValidity("Ange en giltig e-postadress.!");
     }else{
         setOKStyle(email);
-        email.setCustomValidity("Great, but remove me later");
     }
 
 });
