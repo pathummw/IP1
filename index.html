@@ -22,13 +22,13 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/integration
             emailjs.init('user_fplHSNNvIeCHoMQCULkRK');
         })();
-    </script>
-    <script type="text/javascript">
+    </script> -->
+    <!-- <script type="text/javascript">
         window.onload = function() {
             console.log("function call");
             document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -40,7 +40,7 @@
                 console.log("Email sent");
             });
         }
-    </script>
+    </script> -->
 
 </head>
 <body >   <!-- onload="startTime()" -->
@@ -59,6 +59,7 @@
                 <li><a  href="#behandlingar">Behandlingar</a></li>
                 <li><a  href="#bokaTid">Boka tid</a></li>
                 <li><a  href="#omMig">Om mig</a></li>
+                <li><a  href="#hittaHit">Hitta hit</a></li>
                 <li><a  href="#kontaktaOss">Kontakta mig</a></li>
             </ul>
         </nav>
@@ -125,12 +126,12 @@
 
 
 
-  <section class="flexOmMig" id="">
-    <div>
+  <section class="flexOmMig" id="omMig">
+    <div class="omMigTest">
         <h2>Om mig</h2>
     </div>
     
-    <aside data-aos="fade-right" class="leftOmMig" id="test">
+    <aside data-aos="fade-right" class="leftOmMig">
         <p>Jag heter Anjalee Loku Kankanamge Don. Jag är lung, ansvarsfull, trevlig tjej som har jobbat inom vården nästan 
             10 år som undersköterska. 
             Den 4 maj 2020 började jag läsa om 
@@ -160,11 +161,14 @@
 
 
 
-    <address class="flexHittaHit"  data-aos="fade-up" id="hittaHit">
-        <h2>Anjalee fotvård AB</h2>
-        <h3><i class="fa fa-map-marker"></i>&nbsp;Harrgatan 1 &nbsp;&nbsp;Saltsjöbaden</h3>
-        <h3><i class="fa fa-phone"></i>&nbsp;073 756 5 756</h3> 
-        <h3><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<a href="mailto:anjalee90@hotmail.com">anjalee90@hotmail.com</a></h3> 
+    <address class="flexHittaHit"   id="hittaHit">
+        <div data-aos="fade-up">
+            <h2>Anjalee fotvård AB</h2>
+            <h3><i class="fa fa-map-marker"></i>&nbsp;Harrgatan 1 &nbsp;&nbsp;Saltsjöbaden</h3>
+            <h3><i class="fa fa-phone"></i>&nbsp;073 756 5 756</h3> 
+            <h3><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<a href="mailto:anjalee90@hotmail.com">anjalee90@hotmail.com</a></h3> 
+        </div>
+        
     </address>
 
 

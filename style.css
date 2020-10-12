@@ -138,10 +138,10 @@ p{
 }
 
 @media screen and (max-width: 750px){
+
     ul > li{
         width: 100%;
         align-items: center;
-        
     }
     nav{
         position: absolute;
@@ -154,7 +154,7 @@ p{
         width: 100vw;
         text-align: center;
         border-radius: 0;
-        margin: 0;
+        margin: 0 0 0 -4vw;
         padding: 0.5em 0;
         background-color: rgba(24, 23, 23, 0.493);
         color: mistyrose;
@@ -163,8 +163,14 @@ p{
     .flexContainerHeroSection .right-half{
         width: 100%;
     }
+    .flexContainerHeroSection .right-half img{
+        margin-top: 40vh;  /* TEST */
+    }
     .flexContainerHeroSection .left-half{
-        position: relative;
+        margin-top: 10vh;  /* TEST */
+    }
+    .flexContainerHeroSection{
+        flex-direction: column-reverse;
     }
 
     section > h1{
@@ -191,26 +197,22 @@ p{
         color: rgb(78, 78, 78);
         font-size: 5vw;
     }
-    .flexContainerHeroSection .right-half{
-        animation: test;   /* Remove later pathum */
-    }
-    .flexContainerContactForm{
-        flex-direction: column;
-
-    }
+    
 
     .flexOmMig{
         flex-direction: column-reverse;
     }
+
+  
     .flexOmMig div{  
         order: 2;
-        /* margin: 5vh 0; */  
     }
-   
-    #test{
-        /* background-color: violet;
-        flex: 1;/*  */
-        width: 100%;
+
+    address h2{
+        font-size: 8vw;
+    }
+    address h3{
+        font-size: 5vw;
     }
 
 }
@@ -478,14 +480,16 @@ input,textarea:focus{
     height: 100vh;
     margin: 10vh -4vw;
 }
+.flexHittaHit div{
+    text-align: center;
+}
 .flexHittaHit i{
     font-size: 0.75em;
     color: rgb(165, 165, 165);
 }
 
 .flexHittaHit h2{
-    /* margin-bottom: 0.5em; */
-    font-size: 4em;
+    /* font-size: 4em; */
 }
 
 .flexPrisList button{    /* //Override button style */
@@ -506,7 +510,7 @@ input,textarea:focus{
     /* margin-top: 10vh; */
 }
 .flexOmMig div{
-    width: 100vw; 
+    width: 100%; 
     margin: 10vh 0;
 }
 .flexOmMig .leftOmMig{
@@ -519,6 +523,7 @@ input,textarea:focus{
     /* text-align: justify; */
     background-color: rgb(243, 255, 241);
 }
+
 
 .flexOmMig .leftOmMig p{
     padding: 1.5em;
@@ -574,5 +579,8 @@ address a{
     color: #8f8886;
 }
 address a:hover{
-    color: #b42703;
+    color: #056d16;
 }
+
+
+
