@@ -1,8 +1,8 @@
 const burgerBtn = document.getElementById("hamburger");
-let spanElements = document.querySelectorAll("span");
-let navBar = document.querySelector("nav");
-let listButtons = document.querySelectorAll("nav a");
-let img = document.querySelector("img");
+const spanElements = document.querySelectorAll("span");
+const navBar = document.querySelector("nav");
+const listButtons = document.querySelectorAll("nav a");
+const img = document.querySelector("img");
 let firstClick = true;  /* Set the boolean value when hanburger button clicked to change the state of the burger button */
 
 

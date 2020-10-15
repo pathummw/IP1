@@ -113,7 +113,10 @@ p{
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    /* background-color: crimson;  */
+}
+.flexContainerHeroSection .left-half p{
+    font-size: 1.5vw;
+    color: rgba(63, 63, 63, 0.979);
 }
 .flexContainerHeroSection .right-half{
     flex: 2;
@@ -141,10 +144,10 @@ p{
 
     ul > li{
         width: 100%;
-        align-items: center;
+        align-items: center; 
     }
     nav{
-        position: absolute;
+        position: absolute; 
     }
 
     .flexContainerHeroSection{
@@ -171,6 +174,9 @@ p{
     }
     .flexContainerHeroSection{
         flex-direction: column-reverse;
+    }
+    .flexContainerHeroSection .left-half p{
+        font-size: 4vw;
     }
 
     section > h1{
@@ -213,6 +219,10 @@ p{
     }
     address h3{
         font-size: 5vw;
+    }
+
+    .socialNetwork a{
+        font-size: 3em !important;   /* !important : Force to over ride font size,otherwise font size overriding in media queries not working*/
     }
 
 }
@@ -361,7 +371,7 @@ footer p span{
     text-decoration: none;
     border: none;
     height: 1.5em;  
-    width: 1.5em;
+    width: 1.5em; 
     border-radius: 50%;
     align-items: center;justify-content: center;
     margin: 0 1em;
@@ -582,5 +592,55 @@ address a:hover{
     color: #056d16;
 }
 
+.thankyou_message{
+    display: flex;
+    display:none;
+    /* width: 100%; */
+    background-color: #1DBC60;
+    /* height: 5em; */
+    border-radius: 5px;
+    z-index: 1;
+    /* position: absolute; */
+    margin-top: 50vh;
+    
+    
+    /* border-radius: 10px; */
+}
+.thankyou_message p{
+    color: lightcyan;
+    /* padding: 1em; */
+    padding: 1em;
+   /*  height: 20vh; */
+    
+}
+form{
+    position: relative;
+}
+.thankyou_message i{
+    color:  rgb(49, 49, 49);
+    top: -15px;
+    right: -15px;
+    /* position: absolute; */
+}
+/* .thankyou_message input{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -25px;
+    right: -15px;
+    opacity: 0; 
+    z-index: -1;
 
+} */
+.thankyou_message i:target{
+    background-color: orangered;
+}
+.thankyou_message i:hover{
+    color: rgb(101, 105, 103);
+}
+
+.thankyou_messager input:checked >.thankyou_messager{
+    display: none;
+    background-color: rgb(150, 16, 83);
+}
 

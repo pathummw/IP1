@@ -1,51 +1,25 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Fotvård Nacka, Fotvård Saltsjöbaden,Fotvård Fisksätra, billigt fotvård,fotbehandling, Stockholm fotvård,fot therapy,fina fötter,tar hand om fötter">
+    <meta name="description" content="Den här websidan är Anjalee fotvårds Fisksätra hemsidan. Man kan boka tid att ha fotvård i Nacka,Fisksätra">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
     <script src="scripts.js" defer></script>
     <script src="validation.js" defer></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>  <!-- Send email -->
-    <script src="email.js" defer></script>
     <link rel="stylesheet" href="hamburgerMenu.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel='shortcut icon' href='images/foot.png' type="image/png">
     <script src="hamburger.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- This is for implement social media icons -->
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    
-
-    <title>Anjalee Fotvård</title>
-
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-</script>
-    <!-- <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/integration
-            emailjs.init('user_fplHSNNvIeCHoMQCULkRK');
-        })();
-    </script> -->
-    <!-- <script type="text/javascript">
-        window.onload = function() {
-            console.log("function call");
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                //this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this);
-                console.log("Email sent");
-            });
-        }
-    </script> -->
+    <!-- <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js" defer></script>  --><!-- to send email using google sheet -->
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js" defer></script>
+    <title>Anjalee Fotvård Fisksätra</title>
 
 </head>
-<body >   <!-- onload="startTime()" -->
-
-
+<body >
     <header>
         <div id="hamburger" class="hamburger">
             <span></span>
@@ -71,7 +45,9 @@
             
             <h1 id="name">Anjalee</h1>
             <h2>Fotvård</h2>
-            <p>Din fötternas idol. Det är dags att ge nytt liv till din sköna och fina fötter.</p>
+            <p>Fötter är fantastiska och de bär oss genom hela livet. Så ta hand om dina fötter. </br>
+                Pigga upp trötta fötter med bra behandling.
+            </p>
             <button class="btnBook">Book now</button>
             
         </aside>
@@ -83,7 +59,7 @@
                 <span id="txtMin" class="min"></span> -->
                  
             </div>
-            <img src="images/yoga.png" alt="">
+            <img src="images/yoga.png" alt="Den är hero bilden som en tjej håller på göra yoga">
         </aside>
         
     </section>
@@ -109,14 +85,6 @@
                 och slipar naglarna, åtgärder eventuella liktorna och nageltrång.</p>
             <button>Boka tid: 350kr</button> 
         </aside>
-        
-        <!-- <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium autem odio optio 
-            repellendus temporibus cum, ex quod dolore veniam repellat ab enim perferendis officia 
-            alias odit sequi 
-            tempora eligendi! Quia! Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Consequuntur rem laudantium culpa saepe ullam, quis minus animi accusantium, exercitationem et facere veritatis quisquam! Sequi maiores eveniet rem ad sit 
-            necessitatibus.</p> -->
-
         
 
     </section>
@@ -179,24 +147,30 @@
             <h2>Kontakta mig</h2>
         </div>
         
-       <!--  <aside class="left-Contact">
-            <h2><i class="fa fa-adn"></i>Anjalee fotvård AB</h2>
-            <h3><i class="fa fa-map-marker"></i> Harrgatan 1</h3>
-            <h3>133 42 Saltsjöbaden</h3>
-            <h2><i class="fa fa-phone"></i> 073 756 5 756</h2>
-        </aside> -->
 
+        <!-- <section style="display: none;" class="thankyou_message">
+            <!-- <i class="fa fa-times-circle-o fa-2x"></i>
+            <input type="checkbox"> -->
+            <!-- <p>Tack för att du kontaktar oss! Vi återkommer snart!</p> -->
+        <!-- </section> -->
 
-        <!-- <aside class="right-Contact"> -->
-            <form data-aos="fade-up" id="contact-form" method="post" name="myemailform" action="mail.php">   <!-- action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec" -->
-                <input id="formName" type="text" placeholder="Namn">
-                <input id="formEmail" type="email" placeholder="Email"> 
-                <input id="formSubject" type="text"  placeholder="Subject">
-                <textarea id="formMessage" type="text" placeholder ="Message"></textarea>
-                <button type="submit" value="Send Form">Submit</button>   <!-- onclick="sendMail()" -->
-    
-            </form>
-        <!-- </aside> -->
+        <form data-aos="fade-up" id="contact-form" class="gform" method="post" name="myemailform" 
+            action="https://script.google.com/macros/s/AKfycbxlgtLLHn80LeGoYhgyG5R1Sqd_xN9TTkmFEkUw/exec">   <!-- action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec" -->
+            
+            <input id="formName" name="name" type="text" placeholder="Namn">
+            <input id="formEmail" name="email" type="email" placeholder="Email"> 
+            <input id="formSubject" name="subject" type="text"  placeholder="Subject">
+            <textarea id="formMessage" name="message" type="text" placeholder ="Message"></textarea>
+            <button type="submit" value="Send Form">Submit</button>
+
+            <section class="thankyou_message">
+            <i class="fa fa-times-circle-o fa-2x"></i>
+            <!-- <input type="checkbox"> -->
+            <p>Tack för att du kontaktar oss! Vi återkommer snart!</p>
+            </section>
+
+        </form>
+        
         
         
 
