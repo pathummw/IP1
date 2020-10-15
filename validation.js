@@ -2,7 +2,8 @@ const email = document.getElementById('formEmail');
 const name = document.getElementById("formName");
 const subject = document.getElementById("formSubject");
 const message = document.getElementById("formMessage");
-
+const button = document.getElementById("btnSubmit");
+let boolErr = false;
 /* console.log(name); */
 email.addEventListener("input", function(event){
     if(email.validity.typeMismatch){
@@ -27,6 +28,11 @@ message.addEventListener("input",function(event){
     checkTextField(message,400);
 });
 
+button.addEventListener("click",function(event){
+    clearInputFieldsOnSubmit();
+});
+
+
 function checkTextField(txtName, length){   /* Validation function to common text fields: Name, Subject, Message */
     if(txtName.value != '' && txtName.value.length <= length){
         setOKStyle(txtName);
@@ -46,6 +52,14 @@ function setErrStyle(inputName){
     inputName.style.backgroundColor = "#FFADAD";
     inputName.style.outlineColor = "#EF3D59";
 }
+
+function clearInputFieldsOnSubmit(){  //reset the background color of input fields after submit the form
+    email.style.backgroundColor = '';
+    name.style.backgroundColor = '';
+    subject.style.backgroundColor = '';
+    message.style.backgroundColor = '';
+}
+
 
 
 

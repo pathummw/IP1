@@ -157,18 +157,16 @@
         <form data-aos="fade-up" id="contact-form" class="gform" method="post" name="myemailform" 
             action="https://script.google.com/macros/s/AKfycbxlgtLLHn80LeGoYhgyG5R1Sqd_xN9TTkmFEkUw/exec">   <!-- action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec" -->
             
+            <section class="thankyou_message">
+                <i class="fa fa-times-circle-o fa-2x"></i>
+                <p>Tack för att du kontaktar oss! Vi återkommer snart!</p>
+                </section>
+
             <input id="formName" name="name" type="text" placeholder="Namn">
             <input id="formEmail" name="email" type="email" placeholder="Email"> 
             <input id="formSubject" name="subject" type="text"  placeholder="Subject">
             <textarea id="formMessage" name="message" type="text" placeholder ="Message"></textarea>
-            <button type="submit" value="Send Form">Submit</button>
-
-            <section class="thankyou_message">
-            <i class="fa fa-times-circle-o fa-2x"></i>
-            <!-- <input type="checkbox"> -->
-            <p>Tack för att du kontaktar oss! Vi återkommer snart!</p>
-            </section>
-
+            <button id="btnSubmit" type="submit" value="Send Form">Submit</button>
         </form>
         
         

@@ -81,10 +81,9 @@
             thankYouMessage = form.querySelector(".thankyou_message");
             if (thankYouMessage) {
               thankYouMessage.style.display = "block";
-            
+                
               //add eventlistner to thankyoumessage close icon (i)
               thankYouMessage.querySelector("i").addEventListener("click",closeMessage);
-              console.log(thankYouMessage.querySelector("i"));
             }
           }
       };

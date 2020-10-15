@@ -408,10 +408,11 @@ footer p span{
     font-size: larger;
     font-weight: 300;
     cursor: pointer;
-    padding-left: 0.5em;
+    text-indent: 10px;
     border-radius: 5px;
 
 }
+
 .flexContainerContactForm textarea{
     height: 20vh;
     resize: none;
@@ -595,21 +596,21 @@ address a:hover{
 .thankyou_message{
     display: flex;
     display:none;
-    /* width: 100%; */
-    background-color: #1DBC60;
+    width: 100%;
+    background-color: #1dbc5fec;
     /* height: 5em; */
     border-radius: 5px;
-    z-index: 1;
-    /* position: absolute; */
-    margin-top: 50vh;
-    
-    
+    /* z-index: 1; */
+    position: absolute;
+    height: 70vh;
     /* border-radius: 10px; */
 }
 .thankyou_message p{
     color: lightcyan;
     /* padding: 1em; */
     padding: 1em;
+    padding-top: 10vh;
+    margin: 0 auto;
    /*  height: 20vh; */
     
 }
@@ -620,7 +621,7 @@ form{
     color:  rgb(49, 49, 49);
     top: -15px;
     right: -15px;
-    /* position: absolute; */
+    position: absolute;
 }
 /* .thankyou_message input{
     position: absolute;
@@ -639,8 +640,4 @@ form{
     color: rgb(101, 105, 103);
 }
 
-.thankyou_messager input:checked >.thankyou_messager{
-    display: none;
-    background-color: rgb(150, 16, 83);
-}
 
