@@ -2,12 +2,11 @@
 
     var thankYouMessage;
 
-
     // get all data in form and return object
     function getFormData(form) {
       var elements = form.elements;
       var honeypot;
-  
+        console.log(elements);
       var fields = Object.keys(elements).filter(function(k) {
         if (elements[k].name === "honeypot") {
           honeypot = elements[k].value;
@@ -28,7 +27,7 @@
       var formData = {};
       fields.forEach(function(name){
         var element = elements[name];
-        
+        console.log(elements[name]);
         // singular form elements just have one value
         formData[name] = element.value;
   
@@ -53,19 +52,23 @@
   
       return {data: formData, honeypot: honeypot};
     }
-  
+
+
+
     function handleFormSubmit(event) {  // handles form submit without any jquery
       event.preventDefault();           // we are submitting via xhr below
       var form = event.target;
       var formData = getFormData(form);
       var data = formData.data;
-  
+     
+
       // If a honeypot field is filled, assume it was done so by a spam bot.
       if (formData.honeypot) {
         return false;
       }
   
-      disableAllButtons(form);
+      disableAllButtons();
+
       var url = form.action;
       var xhr = new XMLHttpRequest();
       xhr.open('POST', url);
@@ -74,10 +77,10 @@
       xhr.onreadystatechange = function() {
           if (xhr.readyState === 4 && xhr.status === 200) {
             form.reset();
-            var formElements = form.querySelector(".form-elements")
-            if (formElements) {
-              formElements.style.display = "none"; // hide form
-            }
+            var formElements = form.querySelector(".form-elements");  
+            /* if (formElements) {
+               formElements.style.display = "none";  // hide form
+            } */
             thankYouMessage = form.querySelector(".thankyou_message");
             if (thankYouMessage) {
               thankYouMessage.style.display = "block";
@@ -93,25 +96,36 @@
       }).join('&');
       xhr.send(encoded);
     }
-    
+
     function loaded() {
       // bind to the submit event of our form
       var forms = document.querySelectorAll("form.gform");
+      /* alert("Loaded function:1"); */
       for (var i = 0; i < forms.length; i++) {
         forms[i].addEventListener("submit", handleFormSubmit, false);
       }
     };
     document.addEventListener("DOMContentLoaded", loaded, false);
-  
-    function disableAllButtons(form) {
-      var buttons = form.querySelectorAll("button");
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = true;
+
+    function disableAllButtons() {
+     
+      var inputs = document.getElementsByTagName("input");
+      /* var txtField = document.getElementById("formMessage"); */
+      if(inputs){
+          for(let i=0; i<inputs.length; i++){
+              inputs[i].style.backgroundColor = "#ffffff";
+          }
       }
+      /* txtField.style.backgroundColor = "#ffffff"; */  //Removed to closeMessage() function because TxtField clear the text before Thank you message display
     }
 
     function closeMessage(){
+        var txtField = document.getElementById("formMessage"); //Before close the message,clear the Text field
+        txtField.style.backgroundColor = "#ffffff";
+
         thankYouMessage.style.display = "none";
+        activateSubmitBtn();  //This funtion that is on validation.js use to disabled the submit button after sending a mail
+
     }
 
   })();

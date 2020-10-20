@@ -14,8 +14,7 @@
     <link rel='shortcut icon' href='images/foot.png' type="image/png">
     <script src="hamburger.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- This is for implement social media icons -->
-    <!-- <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js" defer></script>  --><!-- to send email using google sheet -->
-    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js" defer></script>
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js" defer></script><!-- to send email using google sheet -->
     <title>Anjalee Fotvård Fisksätra</title>
 
 </head>
@@ -31,7 +30,7 @@
             <ul>
                 <li><a  href="#hem">Hem</a></li>
                 <li><a  href="#behandlingar">Behandlingar</a></li>
-                <li><a  href="#bokaTid">Boka tid</a></li>
+                <!-- <li><a  href="#bokaTid">Boka tid</a></li> -->
                 <li><a  href="#omMig">Om mig</a></li>
                 <li><a  href="#hittaHit">Hitta hit</a></li>
                 <li><a  href="#kontaktaOss">Kontakta mig</a></li>
@@ -39,25 +38,22 @@
         </nav>
     </header>
 
-   <section class="flexContainerHeroSection">
+   <section id="hem" class="flexContainerHeroSection">
        
         <aside class="left-half">
             
             <h1 id="name">Anjalee</h1>
             <h2>Fotvård</h2>
-            <p>Fötter är fantastiska och de bär oss genom hela livet. Så ta hand om dina fötter. </br>
+            <p>Fötter är fantastiska och de bär oss genom hela livet. Så ta hand om dina fötter. <br>
                 Pigga upp trötta fötter med bra behandling.
             </p>
-            <button class="btnBook">Book now</button>
+            <li ><a class="btnBook" href="#behandlingar">Boka tid</a></li>
             
         </aside>
 
         <aside class="right-half">
             <span class="backgroundShape2"></span> 
             <div class="time">
-                <!-- <span id="txtHour" class="hour"></span>    TIME
-                <span id="txtMin" class="min"></span> -->
-                 
             </div>
             <img src="images/yoga.png" alt="Den är hero bilden som en tjej håller på göra yoga">
         </aside>
@@ -146,13 +142,6 @@
         <div>
             <h2>Kontakta mig</h2>
         </div>
-        
-
-        <!-- <section style="display: none;" class="thankyou_message">
-            <!-- <i class="fa fa-times-circle-o fa-2x"></i>
-            <input type="checkbox"> -->
-            <!-- <p>Tack för att du kontaktar oss! Vi återkommer snart!</p> -->
-        <!-- </section> -->
 
         <form data-aos="fade-up" id="contact-form" class="gform" method="post" name="myemailform" 
             action="https://script.google.com/macros/s/AKfycbxlgtLLHn80LeGoYhgyG5R1Sqd_xN9TTkmFEkUw/exec">   <!-- action="https://script.google.com/macros/s/AKfycbzijpebzVXIRgnAmH7YLePk070H5Z1HfP_fwGMrRQ/exec" -->
@@ -161,21 +150,23 @@
                 <i class="fa fa-times-circle-o fa-2x"></i>
                 <p>Tack för att du kontaktar oss! Vi återkommer snart!</p>
                 </section>
-
-            <input id="formName" name="name" type="text" placeholder="Namn">
-            <input id="formEmail" name="email" type="email" placeholder="Email"> 
-            <input id="formSubject" name="subject" type="text"  placeholder="Subject">
-            <textarea id="formMessage" name="message" type="text" placeholder ="Message"></textarea>
-            <button id="btnSubmit" type="submit" value="Send Form">Submit</button>
+            <section class="form-elements">
+                <input id="formName" name="name" type="text" placeholder="Namn">
+                <input id="formEmail" name="email" type="email" placeholder="Email"> 
+                <input id="formSubject" name="subject" type="text"  placeholder="Subject">
+                <textarea id="formMessage" name="message" type="text" placeholder ="Message"></textarea>
+                <button id="btnSubmit" type="submit" value="Send Form">Submit</button>
+            </section>
+            
         </form>
         
         
         
 
     </section>
-    <!-- <section class="map">
+    <section class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.679208984214!2d18.254516814389895!3d59.29357814757484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f7f50cc979341%3A0x16a575ed4298babd!2sHarrgatan%201%2C%20133%2042%20Saltsj%C3%B6baden!5e0!3m2!1ssv!2sse!4v1600897872281!5m2!1ssv!2sse" width="100%" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </section> -->
+    </section>
     
 <footer>
     <section class="socialNetwork">

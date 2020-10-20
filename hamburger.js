@@ -25,7 +25,6 @@ function reSizeFunction(){
 burgerBtn.addEventListener("click",function(event){
 
     if(firstClick){
-        spanElements[1].style.backgroundColor = "red";
 
         spanElements[0].style.transform = "rotate(45deg) translate(9px, 8px)";
         spanElements[1].style.opacity = "0";
@@ -36,7 +35,7 @@ burgerBtn.addEventListener("click",function(event){
         firstClick = false;
     }
     else if(!firstClick){
-        spanElements[1].style.backgroundColor = "green";
+        
         spanElements[0].style.transform = "rotate(0deg)";
         spanElements[1].style.opacity = "100";
         spanElements[2].style.transform = "rotate(0deg)";

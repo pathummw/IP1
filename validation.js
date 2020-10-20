@@ -3,44 +3,47 @@ const name = document.getElementById("formName");
 const subject = document.getElementById("formSubject");
 const message = document.getElementById("formMessage");
 const button = document.getElementById("btnSubmit");
-let boolErr = false;
-/* console.log(name); */
+
 email.addEventListener("input", function(event){
-    if(email.validity.typeMismatch){
+    if(email.validity.typeMismatch || email.value ==''){
         setErrStyle(email);
-        /* email.setCustomValidity("Ange en giltig e-postadress.!"); */
+        email.reportValidity();
+        activateSubmitBtn();
     }else{
         setOKStyle(email);
+        activateSubmitBtn();
     }
 
 });
 
 name.addEventListener("input",function(event){
     checkTextField(name,50);
+    activateSubmitBtn();
 }); 
  
 
 subject.addEventListener("input",function(event){
     checkTextField(subject,100);
+    activateSubmitBtn();
 });
 
 message.addEventListener("input",function(event){
     checkTextField(message,400);
+    activateSubmitBtn();
 });
 
 button.addEventListener("click",function(event){
-    clearInputFieldsOnSubmit();
+    activateSubmitBtn();
 });
+
+
 
 
 function checkTextField(txtName, length){   /* Validation function to common text fields: Name, Subject, Message */
     if(txtName.value != '' && txtName.value.length <= length){
         setOKStyle(txtName);
-        /* Can not be empty or too long characters error msg */
     }else{
         setErrStyle(txtName);
-        /* txtName.setCustomValidity("Nameee"); */
-        /* setErrorLog */
     }
 }
 function setOKStyle(inputName){
@@ -53,23 +56,13 @@ function setErrStyle(inputName){
     inputName.style.outlineColor = "#EF3D59";
 }
 
-function clearInputFieldsOnSubmit(){  //reset the background color of input fields after submit the form
-    email.style.backgroundColor = '';
-    name.style.backgroundColor = '';
-    subject.style.backgroundColor = '';
-    message.style.backgroundColor = '';
-}
-
-
-
-
-/* outline-color: #EF233C;
-    background-color: #FFADAD; */
-
-
-/* if(!name.match(/^[a-zZ])){
-    error MSG
-    return false
+function activateSubmitBtn(){
+    if(email.value =='' || email.validity.typeMismatch || name.value =='' || subject.value =='' || message.value ==''){
+        button.classList.remove("enableSubmitButton");
+        button.disabled = true;
     }
-    return true
-} */
+    else{
+        button.classList.add("enableSubmitButton");
+        button.disabled = false;
+    }
+}
