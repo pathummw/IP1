@@ -27,7 +27,7 @@ https://9elements.github.io/fancy-border-radius/
 https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server
 + After sending the message, shows a thank you message and after closing that thank you message, all the input fields will be cleared.
 
-## Map
+
 ## Footer
 + Used font awsome 4.7 to implement the social media icons. https://fontawesome.com/v4.7.0/icons/
 
