@@ -16,11 +16,11 @@ email.addEventListener("input", function(event){
 
 });
 
+
 name.addEventListener("input",function(event){
     checkTextField(name,50);
     activateSubmitBtn();
 }); 
- 
 
 subject.addEventListener("input",function(event){
     checkTextField(subject,100);
