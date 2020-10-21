@@ -100,7 +100,6 @@
     function loaded() {
       // bind to the submit event of our form
       var forms = document.querySelectorAll("form.gform");
-      /* alert("Loaded function:1"); */
       for (var i = 0; i < forms.length; i++) {
         forms[i].addEventListener("submit", handleFormSubmit, false);
       }
@@ -110,7 +109,6 @@
     function disableAllButtons() {
      
       var inputs = document.getElementsByTagName("input");
-      /* var txtField = document.getElementById("formMessage"); */
       if(inputs){
           for(let i=0; i<inputs.length; i++){
               inputs[i].style.backgroundColor = "#ffffff";

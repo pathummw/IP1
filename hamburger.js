@@ -35,7 +35,7 @@ burgerBtn.addEventListener("click",function(event){
         firstClick = false;
     }
     else if(!firstClick){
-        
+
         spanElements[0].style.transform = "rotate(0deg)";
         spanElements[1].style.opacity = "100";
         spanElements[2].style.transform = "rotate(0deg)";
@@ -51,9 +51,3 @@ burgerBtn.addEventListener("click",function(event){
 
 /* https://codepen.io/designcouch/pen/Atyop */
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js */
-
-  /*   if (mediaQuery.matches) {
-        // Then trigger an alert
-        alert('Media Query Matched!')
-    }
-     */
